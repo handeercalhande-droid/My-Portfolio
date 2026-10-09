@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eman Noor | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Leaflet CSS for Interactive Map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo-box">EN</div>
+    <div class="nav-links">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#timeline">Journey</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <button id="theme-toggle" class="btn theme-btn">🌙 Dark Mode</button>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="hero" class="hero-section">
+    <div class="hero-content card">
+      <h1>Hi, I'm <span class="highlight">Eman Noor</span>.</h1>
+      <p class="subtitle">IT Undergraduate Student at University of the Punjab | Web Developer</p>
+      <p class="desc">I build modern full-stack web applications, interactive UI components, and automation tools.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-primary">Get In Touch!</a>
+        <a href="#" class="btn btn-secondary">Download CV</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION WITH ROTATING ANIMATION -->
+  <section id="skills" class="section">
+    <h2 class="section-title">Skills & Technologies</h2>
+    <div class="skills-grid">
+      
+      <!-- FRONTEND CARD -->
+      <div class="card skill-category">
+        <h3>🎨 FRONTEND</h3>
+        <div class="badges-container">
+          <span class="badge animated-badge">React.js</span>
+          <span class="badge animated-badge">Tailwind CSS</span>
+          <span class="badge animated-badge">JavaScript</span>
+          <span class="badge animated-badge">HTML5</span>
+          <span class="badge animated-badge">CSS3</span>
+          <span class="badge animated-badge">Responsive Design</span>
+        </div>
+      </div>
+
+      <!-- AI & AUTOMATION CARD -->
+      <div class="card skill-category">
+        <h3>🤖 AI & AUTOMATION</h3>
+        <div class="badges-container">
+          <span class="badge animated-badge">AI Chatbots</span>
+          <span class="badge animated-badge">AI Voice Agents</span>
+          <span class="badge animated-badge">Prompt Engineering</span>
+        </div>
+      </div>
+
+      <!-- BACKEND CARD -->
+      <div class="card skill-category">
+        <h3>⚙️ BACKEND & TOOLS</h3>
+        <div class="badges-container">
+          <span class="badge animated-badge">Node.js</span>
+          <span class="badge animated-badge">Express.js</span>
+          <span class="badge animated-badge">MongoDB</span>
+          <span class="badge animated-badge">Git & GitHub</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- JOURNEY TIMELINE WITH MAP & LOCATIONS -->
+  <section id="timeline" class="section">
+    <h2 class="section-title">Journey Timeline</h2>
+    <div class="timeline-container">
+      
+      <div class="timeline-left">
+        <!-- TIMELINE ITEM 1 -->
+        <div class="card timeline-card" data-lat="31.5204" data-lng="74.3587" data-location="Lahore, Pakistan">
+          <div class="timeline-date">Oct 2025 - Present</div>
+          <h3>Freelance Web Developer</h3>
+          <p class="timeline-role">Self-employed</p>
+          <p>Designing, building and deploying commercial websites and AI automation systems for local businesses.</p>
+
+        </div>
+
+        <!-- TIMELINE ITEM 2 -->
+        <div class="card timeline-card" data-lat="31.4187" data-lng="73.0791" data-location="Faisalabad, Pakistan">
+          <div class="timeline-date">Apr 2025 - Oct 2025</div>
+          <h3>Web Development Contributor</h3>
+          <p class="timeline-role">Evolvian Softwares</p>
+          <p>Worked on frontend development, UI design improvements, and web integration tasks.</p>
+
+        </div>
+      </div>
+
+      <!-- MAP CONTAINER -->
+      <div class="timeline-right">
+        <div class="card map-card">
+          <h3>📍 Location Map</h3>
+          <div id="map"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects" class="section">
+    <h2 class="section-title">Selected Projects</h2>
+    <div class="projects-grid">
+      
+      <div class="card project-card">
+        <h3>Culinary Canvas</h3>
+        <p>Full-stack web application featuring recipe labs and masterclasses.</p>
+        <button class="btn btn-small view-project-btn">View Details</button>
+      </div>
+
+      <div class="card project-card">
+        <h3>RoadRescue AI</h3>
+        <p>React Native application with real-time location mapping for roadside assistance.</p>
+        <button class="btn btn-small view-project-btn">View Details</button>
+      </div>
+
+      <div class="card project-card">
+        <h3>FitCrew</h3>
+        <p>Full-stack health and fitness management application with interactive dashboard.</p>
+        <button class="btn btn-small view-project-btn">View Details</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="section">
+    <div class="card contact-card">
+      <h2>Get In Touch</h2>
+      <form class="contact-form" onsubmit="event.preventDefault(); alert('Message Sent!');">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" placeholder="Eman Noor" required>
+        </div>
+        <div class="form-group">
+          <label>Your Email</label>
+          <input type="email" placeholder="eman@example.com" required>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea rows="4" placeholder="Hi Eman, let's connect!" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message ✉️</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- MODAL FOR PROJECT DETAILS -->
+  <div id="project-modal" class="modal">
+    <div class="modal-content card">
+      <span class="close-modal">&times;</span>
+      <h2 id="modal-title">Project Title</h2>
+      <p id="modal-desc">Project details and technical details go here...</p>
+      <button class="btn btn-secondary close-btn">Close</button>
+    </div>
+  </div>
+
+  <!-- Leaflet JS for Map -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
